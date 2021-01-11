@@ -16429,11 +16429,13 @@ extern "C" {
         obj: *mut futhark_opaque_s11_state,
     ) -> ::std::os::raw::c_int;
 }
+unsafe impl Send for futhark_free_opaque_s11_state{}
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
 pub struct futhark_opaque_s2_state {
     _unused: [u8; 0],
 }
+unsafe impl Send for futhark_opaque_s2_state{}
 extern "C" {
     pub fn futhark_free_opaque_s2_state(
         ctx: *mut futhark_context,
@@ -16445,6 +16447,8 @@ extern "C" {
 pub struct futhark_opaque_s8_state {
     _unused: [u8; 0],
 }
+
+unsafe impl Send for futhark_opaque_s8_state{}
 extern "C" {
     pub fn futhark_free_opaque_s8_state(
         ctx: *mut futhark_context,
