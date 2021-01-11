@@ -16423,13 +16423,13 @@ extern "C" {
 pub struct futhark_opaque_s11_state {
     _unused: [u8; 0],
 }
+unsafe impl Send for futhark_opaque_s11_state{}
 extern "C" {
     pub fn futhark_free_opaque_s11_state(
         ctx: *mut futhark_context,
         obj: *mut futhark_opaque_s11_state,
     ) -> ::std::os::raw::c_int;
 }
-unsafe impl Send for futhark_free_opaque_s11_state{}
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
 pub struct futhark_opaque_s2_state {
