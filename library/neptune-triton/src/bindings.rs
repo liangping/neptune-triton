@@ -16390,6 +16390,7 @@ extern "C" {
 pub struct futhark_opaque_p11_state {
     _unused: [u8; 0],
 }
+unsafe impl Send for futhark_opaque_p11_state {}
 extern "C" {
     pub fn futhark_free_opaque_p11_state(
         ctx: *mut futhark_context,
@@ -16401,6 +16402,7 @@ extern "C" {
 pub struct futhark_opaque_p2_state {
     _unused: [u8; 0],
 }
+unsafe impl Send for futhark_opaque_p2_state {}
 extern "C" {
     pub fn futhark_free_opaque_p2_state(
         ctx: *mut futhark_context,
@@ -16412,6 +16414,7 @@ extern "C" {
 pub struct futhark_opaque_p8_state {
     _unused: [u8; 0],
 }
+unsafe impl Send for futhark_opaque_p8_state{}
 extern "C" {
     pub fn futhark_free_opaque_p8_state(
         ctx: *mut futhark_context,
@@ -16460,6 +16463,7 @@ extern "C" {
 pub struct futhark_opaque_t8_64m_state {
     _unused: [u8; 0],
 }
+unsafe  impl Send for futhark_opaque_t8_64m_state {}
 extern "C" {
     pub fn futhark_free_opaque_t8_64m_state(
         ctx: *mut futhark_context,
