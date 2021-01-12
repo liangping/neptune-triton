@@ -542,7 +542,8 @@ pub struct FutharkOpaqueP11State {
     ptr: *const bindings::futhark_opaque_p11_state,
     ctx: *mut bindings::futhark_context,
 }
-
+unsafe impl Send for FutharkOpaqueP11State {}
+unsafe impl Sync for FutharkOpaqueP11State {}
 impl FutharkOpaqueP11State {
     pub(crate) unsafe fn as_raw(&self) -> *const bindings::futhark_opaque_p11_state {
         self.ptr
@@ -582,7 +583,8 @@ pub struct FutharkOpaqueP2State {
     ptr: *const bindings::futhark_opaque_p2_state,
     ctx: *mut bindings::futhark_context,
 }
-
+unsafe impl Send for FutharkOpaqueP2State {}
+unsafe impl Sync for FutharkOpaqueP2State {}
 impl FutharkOpaqueP2State {
     pub(crate) unsafe fn as_raw(&self) -> *const bindings::futhark_opaque_p2_state {
         self.ptr
@@ -622,7 +624,8 @@ pub struct FutharkOpaqueP8State {
     ptr: *const bindings::futhark_opaque_p8_state,
     ctx: *mut bindings::futhark_context,
 }
-
+unsafe impl Send for FutharkOpaqueP8State {}
+unsafe impl Sync for FutharkOpaqueP8State {}
 impl FutharkOpaqueP8State {
     pub(crate) unsafe fn as_raw(&self) -> *const bindings::futhark_opaque_p8_state {
         self.ptr
@@ -662,7 +665,8 @@ pub struct FutharkOpaqueS11State {
     ptr: *const bindings::futhark_opaque_s11_state,
     ctx: *mut bindings::futhark_context,
 }
-
+unsafe impl Send for FutharkOpaqueS11State {}
+unsafe impl Sync for FutharkOpaqueS11State {}
 impl FutharkOpaqueS11State {
     pub(crate) unsafe fn as_raw(&self) -> *const bindings::futhark_opaque_s11_state {
         self.ptr
@@ -703,6 +707,8 @@ pub struct FutharkOpaqueS2State {
     ctx: *mut bindings::futhark_context,
 }
 
+unsafe impl Send for FutharkOpaqueS2State {}
+unsafe impl Sync for FutharkOpaqueS2State {}
 impl FutharkOpaqueS2State {
     pub(crate) unsafe fn as_raw(&self) -> *const bindings::futhark_opaque_s2_state {
         self.ptr
@@ -743,6 +749,8 @@ pub struct FutharkOpaqueS8State {
     ctx: *mut bindings::futhark_context,
 }
 
+unsafe impl Send for FutharkOpaqueS8State {}
+unsafe impl Sync for FutharkOpaqueS8State {}
 impl FutharkOpaqueS8State {
     pub(crate) unsafe fn as_raw(&self) -> *const bindings::futhark_opaque_s8_state {
         self.ptr
@@ -783,6 +791,8 @@ pub struct FutharkOpaqueT864MState {
     ctx: *mut bindings::futhark_context,
 }
 
+unsafe impl Send for FutharkOpaqueT864MState {}
+unsafe impl Sync for FutharkOpaqueT864MState {}
 impl FutharkOpaqueT864MState {
     pub(crate) unsafe fn as_raw(&self) -> *const bindings::futhark_opaque_t8_64m_state {
         self.ptr
