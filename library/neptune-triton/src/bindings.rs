@@ -16391,6 +16391,7 @@ pub struct futhark_opaque_p11_state {
     _unused: [u8; 0],
 }
 unsafe impl Send for futhark_opaque_p11_state {}
+unsafe impl Sync for futhark_opaque_p11_state {}
 extern "C" {
     pub fn futhark_free_opaque_p11_state(
         ctx: *mut futhark_context,
@@ -16403,6 +16404,7 @@ pub struct futhark_opaque_p2_state {
     _unused: [u8; 0],
 }
 unsafe impl Send for futhark_opaque_p2_state {}
+unsafe impl Sync for futhark_opaque_p2_state {}
 extern "C" {
     pub fn futhark_free_opaque_p2_state(
         ctx: *mut futhark_context,
@@ -16415,6 +16417,7 @@ pub struct futhark_opaque_p8_state {
     _unused: [u8; 0],
 }
 unsafe impl Send for futhark_opaque_p8_state{}
+unsafe impl Sync for futhark_opaque_p8_state{}
 extern "C" {
     pub fn futhark_free_opaque_p8_state(
         ctx: *mut futhark_context,
@@ -16427,6 +16430,7 @@ pub struct futhark_opaque_s11_state {
     _unused: [u8; 0],
 }
 unsafe impl Send for futhark_opaque_s11_state{}
+unsafe impl Sync for futhark_opaque_s11_state{}
 extern "C" {
     pub fn futhark_free_opaque_s11_state(
         ctx: *mut futhark_context,
@@ -16439,6 +16443,7 @@ pub struct futhark_opaque_s2_state {
     _unused: [u8; 0],
 }
 unsafe impl Send for futhark_opaque_s2_state{}
+unsafe impl Sync for futhark_opaque_s2_state{}
 extern "C" {
     pub fn futhark_free_opaque_s2_state(
         ctx: *mut futhark_context,
@@ -16452,6 +16457,7 @@ pub struct futhark_opaque_s8_state {
 }
 
 unsafe impl Send for futhark_opaque_s8_state{}
+unsafe impl Sync for futhark_opaque_s8_state{}
 extern "C" {
     pub fn futhark_free_opaque_s8_state(
         ctx: *mut futhark_context,
@@ -16463,7 +16469,8 @@ extern "C" {
 pub struct futhark_opaque_t8_64m_state {
     _unused: [u8; 0],
 }
-unsafe  impl Send for futhark_opaque_t8_64m_state {}
+unsafe impl Send for futhark_opaque_t8_64m_state {}
+unsafe impl Sync for futhark_opaque_t8_64m_state {}
 extern "C" {
     pub fn futhark_free_opaque_t8_64m_state(
         ctx: *mut futhark_context,
